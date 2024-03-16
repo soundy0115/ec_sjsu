@@ -29,6 +29,35 @@ class _ClassPageState extends State<ClassPage> {
             Text('Start Time: ${startTime ?? 'Not specified'}'),
             Text('End Time: ${endTime ?? 'Not specified'}'),
             Text('Building: ${building ?? 'Not specified'}'),
+            ElevatedButton(
+              onPressed: () {
+                showGeneralDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  barrierLabel: MaterialLocalizations.of(context)
+                      .modalBarrierDismissLabel,
+                  barrierColor: Colors.black54,
+                  transitionDuration: const Duration(milliseconds: 200),
+                  pageBuilder: (BuildContext buildContext, Animation animation,
+                      Animation secondaryAnimation) {
+                    return Center(
+                      child: Container(
+                        width: 200,
+                        height: 500,
+                        color: Colors.white,
+                        child: Center(
+                          child: Text(
+                            'This is a modal page',
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+              child: Text('Show Modal'),
+            ),
           ],
         ),
       ),
