@@ -159,7 +159,7 @@ class _MainPageState extends State<MainPage> {
                     print('End Time: $_endTime');
                     print('Building: $_building');
 
-                    Navigator.pushNamed(context, '/class', arguments: {
+                    Navigator.pushNamed(context, '/searchresult', arguments: {
                       'start': _startTime,
                       'end': _endTime,
                       'building': _building
