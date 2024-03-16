@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
-class ClassPage extends StatefulWidget {
+class SearchResultPage extends StatefulWidget {
   final Map<String, String?>? args;
 
-  const ClassPage({Key? key, this.args}) : super(key: key);
+  const SearchResultPage({Key? key, this.args}) : super(key: key);
 
   @override
-  _ClassPageState createState() => _ClassPageState();
+  _SearchResultPageState createState() => _SearchResultPageState();
 }
 
-class _ClassPageState extends State<ClassPage> {
+class _SearchResultPageState extends State<SearchResultPage> {
   @override
   Widget build(BuildContext context) {
-    final args = widget.args;
+    final Map<String, String?> args =
+        ModalRoute.of(context)!.settings.arguments as Map<String, String?>;
     print(args);
     final startTime = args?['start'];
     final endTime = args?['end'];
@@ -20,7 +21,7 @@ class _ClassPageState extends State<ClassPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Class Page'),
+        title: Text('SearchReult Page'),
       ),
       body: Center(
         child: Column(

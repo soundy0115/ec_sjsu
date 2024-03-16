@@ -13,7 +13,7 @@ class ResultPage extends StatelessWidget {
             child: TextButton(
           child: const Text("클래스 페이지로"),
           onPressed: () {
-            Navigator.pushNamed(context, '/class');
+            Navigator.pushNamed(context, '/searchresult');
           },
         )));
   }
